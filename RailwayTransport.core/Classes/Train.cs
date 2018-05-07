@@ -8,7 +8,7 @@ using RailwayTransport.core.Interfaces;
 
 namespace RailwayTransport.core.Classes
 {
-    class Train : ICollection<Interfaces.ICarriage>
+   public class Train : ICollection<Interfaces.ICarriage>
     {
         private ICollection<Interfaces.ICarriage> train = new List<Interfaces.ICarriage>();
 
@@ -56,7 +56,7 @@ namespace RailwayTransport.core.Classes
         }
 
 
-        public void SortByComfortClass()
+        public void SortByComfortClass() //сортировка по классу комфортности
         {
             var newList = train.ToList();
             newList.Sort((ICarriage x, ICarriage y) =>
@@ -66,7 +66,7 @@ namespace RailwayTransport.core.Classes
             train = newList;
         }
 
-        public int GetCommonNumberOfPassengers()
+        public int GetCommonNumberOfPassengers() //получить общее число пассажиров в поезде
         {
             int _commonNumber=0;
             foreach(var i in train)
@@ -76,7 +76,7 @@ namespace RailwayTransport.core.Classes
             return _commonNumber;
         }
 
-        public int GetCommonNumberOfBaggage()
+        public int GetCommonNumberOfBaggage() //получить общее число багажа в поезде
         {
             int _commonNumber = 0;
             foreach (var i in train)

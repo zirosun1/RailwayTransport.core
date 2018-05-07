@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RailwayTransport.core", "RailwayTransport.core\RailwayTransport.core.csproj", "{19C731DC-F4B5-4A46-BF11-E0C11572EFE9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RailwayTransport.Core", "RailwayTransport.core\RailwayTransport.Core.csproj", "{19C731DC-F4B5-4A46-BF11-E0C11572EFE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RailwayTransport.Demo", "Demo\RailwayTransport.Demo.csproj", "{D7A2CAF5-9809-42EF-A046-D9B3CFFFA1A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{19C731DC-F4B5-4A46-BF11-E0C11572EFE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19C731DC-F4B5-4A46-BF11-E0C11572EFE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19C731DC-F4B5-4A46-BF11-E0C11572EFE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7A2CAF5-9809-42EF-A046-D9B3CFFFA1A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7A2CAF5-9809-42EF-A046-D9B3CFFFA1A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7A2CAF5-9809-42EF-A046-D9B3CFFFA1A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7A2CAF5-9809-42EF-A046-D9B3CFFFA1A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

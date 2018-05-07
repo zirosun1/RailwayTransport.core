@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{19C731DC-F4B5-4A46-BF11-E0C11572EFE9}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>RailwayTransport.core</RootNamespace>
-    <AssemblyName>RailwayTransport.core</AssemblyName>
+    <ProjectGuid>{D7A2CAF5-9809-42EF-A046-D9B3CFFFA1A1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Demo</RootNamespace>
+    <AssemblyName>Demo</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,9 +31,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,19 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Carriage.cs" />
-    <Compile Include="Classes\Train.cs" />
-    <Compile Include="Enums\ComfortClass.cs" />
-    <Compile Include="Interfaces\ICarriage.cs" />
-    <Compile Include="Interfaces\ITrain.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Task.txt" />
+    <ProjectReference Include="..\RailwayTransport.core\RailwayTransport.Core.csproj">
+      <Project>{19c731dc-f4b5-4a46-bf11-e0c11572efe9}</Project>
+      <Name>RailwayTransport.Core</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

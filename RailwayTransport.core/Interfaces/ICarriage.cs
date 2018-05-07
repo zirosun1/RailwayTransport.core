@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace RailwayTransport.core.Interfaces
 {
-    interface ICarriage
+   public interface ICarriage
     {
         Guid Id { get;  }
-        int NumberOfPassengers { get; }
+        int NumberOfPassengers { get; set; }
+        int NumberOfBaggage { get; set; }
         Enums.ComfortClass ComfortClass { get; set; }
 
     }
