@@ -55,10 +55,14 @@ namespace RailwayTransport.core.Classes
             return train.GetEnumerator();
         }
 
-        protected void Sort(IComparer<ICarriage> comparer )
+
+        public void SortByComfortClass()
         {
             var newList = train.ToList();
-            newList.Sort(comparer);
+            newList.Sort((ICarriage x, ICarriage y) =>
+            {
+               return x.ComfortClass.CompareTo(y.ComfortClass);
+            });
             train = newList;
         }
 
