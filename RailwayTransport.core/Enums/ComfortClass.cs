@@ -9,10 +9,10 @@ namespace RailwayTransport.core.Enums
    public enum ComfortClass
     {
         common,         //общий
+        sedentary,      //сидячий
         reservedSeat,   //плацкарт
         coupe,          //купе
         soft,           //мягкий
-        sedentary,      //сидячий
         doubleRoom      //двухместный
 
     }
