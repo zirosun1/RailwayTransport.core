@@ -10,45 +10,49 @@ namespace RailwayTransport.core.Classes
 {
     class Train : ICollection<Interfaces.ICarriage>
     {
-        public int Count => throw new NotImplementedException();
-
-        public bool IsReadOnly => throw new NotImplementedException();
+        private ICollection<Interfaces.ICarriage> train = new List<Interfaces.ICarriage>();
 
         Guid Id { get; }
 
+
+        public int Count => train.Count;
+
+        public bool IsReadOnly => train.IsReadOnly;
+
+
         public void Add(ICarriage item)
         {
-            throw new NotImplementedException();
+            train.Add(item);
         }
 
         public void Clear()
         {
-            throw new NotImplementedException();
+            train.Clear();
         }
 
         public bool Contains(ICarriage item)
         {
-            throw new NotImplementedException();
+           return train.Contains(item);
         }
 
         public void CopyTo(ICarriage[] array, int arrayIndex)
         {
-            throw new NotImplementedException();
+            train.CopyTo(array, arrayIndex);
         }
 
         public IEnumerator<ICarriage> GetEnumerator()
         {
-            throw new NotImplementedException();
+           return train.GetEnumerator();
         }
 
         public bool Remove(ICarriage item)
         {
-            throw new NotImplementedException();
+            return train.Remove(item);
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return train.GetEnumerator();
         }
     }
 }
