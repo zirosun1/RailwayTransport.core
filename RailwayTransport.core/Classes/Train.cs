@@ -54,5 +54,41 @@ namespace RailwayTransport.core.Classes
         {
             return train.GetEnumerator();
         }
+
+        protected void Sort(IComparer<ICarriage> comparer )
+        {
+            var newList = train.ToList();
+            newList.Sort(comparer);
+            train = newList;
+        }
+
+        public int GetCommonNumberOfPassengers()
+        {
+            int _commonNumber=0;
+            foreach(var i in train)
+            {
+                _commonNumber += i.NumberOfPassengers;
+            }
+            return _commonNumber;
+        }
+
+        public int GetCommonNumberOfBaggage()
+        {
+            int _commonNumber = 0;
+            foreach (var i in train)
+            {
+                _commonNumber += i.NumberOfBaggage;
+            }
+            return _commonNumber;
+        }
+
+        public IEnumerable<ICarriage> GetCarriages(int startRange,int endRange)
+        {
+            foreach(var i in train)
+            {
+                if (i.NumberOfPassengers >= startRange && i.NumberOfPassengers <= endRange)
+                    yield return i;
+            }
+        }
     }
 }
